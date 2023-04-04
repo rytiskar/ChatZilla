@@ -1,0 +1,127 @@
+html{
+    height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+
+.login-box{
+    position: absolute;
+    top: 10%;
+    right: 50px; 
+    width: 400px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+}
+
+.login-box h2{
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.login-box .input-field{
+    position: relative;
+}
+
+.login-box .input-field input{
+    width: 100%;
+    padding: 10px;
+    font-size: 17px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px #fff solid;
+    outline: none;
+    background: transparent;
+}
+
+.login-box .input-field label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 17px;
+    color: #565656;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.login-box .input-field input:focus-within ~ label{
+    top: -20px;
+    left: 0;
+    color: #ff0000;
+    font-size: 12px;
+}
+
+.login-box .input-field input:valid ~ label{
+    top: -20px;
+    left: 0;
+    color: green;
+    font-size: 12px;
+}
+
+.login-box form a{
+    justify-content: center;
+    align-items: center; 
+  }
+
+.btn{
+    position: relative;
+    display: inline-block;
+    padding: 0 40px;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    margin-top: 40px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    height: 40px;
+    -webkit-transition : all 200ms ease-in-out;
+    transition: all 200ms ease-in-out; 
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;    
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    text-align: center;
+    background-color: #ffeba7;
+    color: #102770;
+    font-weight: bold;
+    box-shadow: 0 8px 20px 0 rgba(255,235,167,.2);
+}
+
+.btn:active,
+.btn:focus{  
+  background-color: #102770;
+  color: #fff;
+  box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
+}
+.btn:hover{  
+  background-color: #102770;
+  color: #fff;
+  box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
+}
+.link {
+    color: #c4c3ca;
+}
+.link:hover {
+    color: #ffeba7;
+}
+
+
+
