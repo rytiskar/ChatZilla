@@ -1,0 +1,49 @@
+1. Accounts
+    - Creating an account
+        - create a unique code that allows other users to add
+        - username
+            - unique username
+        - password
+            - special characters, mandatory lenght, numbers
+            - hash password
+        - email
+            - sends email if user requests to change password/retrieve password
+            - check if valid email
+    - Signing into an account
+        - username/email
+        - password
+        - two factor authentication
+    - Logout
+        - Asks if you really want to logout
+    - Admin login?
+    - Session management
+    - Account management
+        - profile picture
+    - Database to store user information (username, hashed password, email)
+
+2. Friend list
+    - add/remove friends
+    - show all friends
+    - block user
+    - notification when a user adds you to his friends
+        - allow to accept and decline
+
+3. Chats
+    - scrollbar
+    - real time communication between users
+    - Show if the message has been 'seen'
+    - possibility to send files
+    - chats are in order based on newest messages
+    - notification when a message is received
+    - can only see messages from users in the friendlist
+    - keyboard shortcuts
+    - save older messages
+        - load only a portion of messages, unless the user scrolls up
+    - Group chats
+        - Create group chats
+
+4. Compatability with other browsers
+
+5. Domain, accessible via web
+
+6. Style
