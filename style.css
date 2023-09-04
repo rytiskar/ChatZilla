@@ -8,7 +8,8 @@ body{
     background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 }
 
-.login-box{
+.login-box,
+.sign-up-box{
     position: absolute;
     top: 10%;
     right: 50px; 
@@ -20,18 +21,21 @@ body{
     border-radius: 15px;
 }
 
-.login-box h2{
+.login-box h2,
+.sign-up-box h2{
     margin: 0 0 30px;
     padding: 0;
     color: #fff;
     text-align: center;
 }
 
-.login-box .input-field{
+.login-box .input-field,
+.sign-up-box .input-field{
     position: relative;
 }
 
-.login-box .input-field input{
+.login-box .input-field input,
+.sign-up-box .input-field input{
     width: 100%;
     padding: 10px;
     font-size: 17px;
@@ -43,7 +47,8 @@ body{
     background: transparent;
 }
 
-.login-box .input-field label{
+.login-box .input-field label,
+.sign-up-box .input-field label{
     position: absolute;
     top: 0;
     left: 0;
@@ -53,24 +58,32 @@ body{
     pointer-events: none;
     transition: 0.5s;
 }
-.login-box .input-field input:focus-within ~ label{
+.login-box .input-field input:focus-within ~ label,
+.sign-up-box .input-field input:focus-within ~ label{
     top: -20px;
     left: 0;
     color: #ff0000;
     font-size: 12px;
 }
 
-.login-box .input-field input:valid ~ label{
+.login-box .input-field input:valid ~ label,
+.sign-up-box .input-field input:valid ~ label{
     top: -20px;
     left: 0;
     color: green;
     font-size: 12px;
 }
 
-.login-box form a{
+.login-box form a,
+.sign-up-box form a{
     justify-content: center;
     align-items: center; 
   }
+
+.create-acc-btn {
+    width: 100%;
+    text-align: center;
+}
 
 .btn{
     position: relative;
