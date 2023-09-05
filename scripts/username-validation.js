@@ -1,3 +1,4 @@
+// checks if the username length is between 4 and 20 characters long
 function usernameLengthValidation(usernameLength) {
     if (usernameLength >= 4 &&  usernameLength <= 20) {
         return true;
