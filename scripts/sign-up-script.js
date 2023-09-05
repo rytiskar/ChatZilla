@@ -1,6 +1,8 @@
 import { validateEmail } from "./email-validation.js";
+import { usernameValidation } from "./username-validation.js";
 
 document.getElementById('create-account-button').addEventListener('click', createAccountClick);
+
 
 
 function createAccountClick() {
@@ -25,5 +27,9 @@ function getInputValue(elementsID) {
 
 // Constantly checks for user's input validation state
 $('#input-email').on('input', function() {
-    validateEmail('#input-email-label', '#input-email'); }
-);
+    validateEmail('#input-email-label', '#input-email'); 
+});
+
+$('#input-username').on('input', function() {
+    usernameValidation('#input-username-label', '#input-username');
+});
