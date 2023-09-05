@@ -21,7 +21,7 @@ function passwordComplexityValidation(password) {
     }
 }
 
-function checkLength(passwordLength) {
+export function checkLength(passwordLength) {
     if (passwordLength >= 12) {
         return true;
     }
@@ -30,7 +30,7 @@ function checkLength(passwordLength) {
     }
 }
 
-function checkUpperCaseLetterContainment(password) {
+export function checkLowerCaseLetterContainment(password) {
     let upperCasePassword = password.toUpperCase();
 
     if (password == upperCasePassword) {
@@ -41,7 +41,7 @@ function checkUpperCaseLetterContainment(password) {
     }
 }
 
-function checkLowerCaseLetterContainment(password) {
+export function checkUpperCaseLetterContainment(password) {
     let lowerCasePassword = password.toLowerCase();
 
     if (password == lowerCasePassword) {
@@ -52,11 +52,11 @@ function checkLowerCaseLetterContainment(password) {
     }
 }
 
-function checkNumberContainment(password) {
+export function checkNumberContainment(password) {
     return /\d/.test(password);
 }
 
-function checkSpecialSymbolContainment(password) {
+export function checkSpecialSymbolContainment(password) {
     let format = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
 
     return format.test(password);
