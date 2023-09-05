@@ -75,3 +75,28 @@ export const passwordValidation = (labelID, inputID) => {
 
     return false;
 }
+
+// checks if the repeated password is identical to the previously given password
+function checkPasswordIdenticality(initialPassword, repeatedPassword) {
+    if (initialPassword == repeatedPassword) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+export const repeatPasswordValidation = (labelID, initialPasswordInputID, repeatedPasswordInputID) => {
+    const $label = $(labelID);
+    const initialPassword = $(initialPasswordInputID).val();
+    const repeatedPassword = $(repeatedPasswordInputID).val();
+
+    if (checkPasswordIdenticality(initialPassword, repeatedPassword)) {
+        $label.css('color', 'green');
+    }
+    else {
+        $label.css('color', 'red');
+    }
+
+    return false;
+}

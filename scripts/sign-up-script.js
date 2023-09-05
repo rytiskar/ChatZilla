@@ -1,6 +1,6 @@
 import { validateEmail } from "./email-validation.js";
 import { usernameValidation } from "./username-validation.js";
-import { passwordValidation } from "./password-validation.js";
+import { passwordValidation, repeatPasswordValidation } from "./password-validation.js";
 
 document.getElementById('create-account-button').addEventListener('click', createAccountClick);
 
@@ -37,4 +37,8 @@ $('#input-username').on('input', function() {
 
 $('#input-password').on('input', function() {
     passwordValidation('#input-password-label', '#input-password');
+})
+
+$('#input-password-repeat').on('input', function() {
+    repeatPasswordValidation('#input-password-repeat-label', '#input-password', '#input-password-repeat');
 })
