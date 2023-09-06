@@ -21,3 +21,12 @@ export const validateEmail = (labelID, inputID) => {
 
     return false;
 };
+
+export function invalidEmailField(emailID) {
+    if (validateEmailRegex(emailID)) {
+        return false;
+    }
+    else {
+        return true;
+    }
+}

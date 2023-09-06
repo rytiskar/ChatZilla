@@ -26,3 +26,17 @@ export function updatePasswordCriteria(password) {
     const passwordInfoElement = document.querySelector('#password-information');
     passwordInfoElement.style.marginBottom = '15px';
 }
+
+export function invalidPasswordCriteria(password) {
+    const criteriaChecks = [
+        { criteria: 'Length (12 characters minimum)', isValid: password.length >= 12 },
+        { criteria: 'Contains at least one lowercase letter', isValid: checkLowerCaseLetterContainment(password) },
+        { criteria: 'Contains at least one uppercase letter', isValid: checkUpperCaseLetterContainment(password) },
+        { criteria: 'Contains at least one digit', isValid: checkNumberContainment(password) },
+        { criteria: 'Contains at least one special character', isValid: checkSpecialSymbolContainment(password) }
+    ];
+
+    const isPasswordValid = criteriaChecks.every(criterion => criterion.isValid);
+
+    return !isPasswordValid;
+}

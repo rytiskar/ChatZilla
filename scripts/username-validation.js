@@ -24,3 +24,7 @@ export const usernameValidation = (labelID, inputID) => {
 
     return false;
 }
+
+export function invalidUsernameFieldLength(usernameID) {
+    return !usernameLengthValidation(usernameID.length);
+}

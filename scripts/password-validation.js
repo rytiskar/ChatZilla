@@ -106,3 +106,7 @@ export const repeatPasswordValidation = (labelID, initialPasswordInputID, repeat
 
     return false;
 }
+
+export function invalidRepeatPasswordField(initialPasswordID, repeatedPasswordID) {
+    return !checkPasswordIdenticality(initialPasswordID, repeatedPasswordID);
+}
