@@ -7,13 +7,16 @@ const validateEmailRegex = (email) => {
 
 export const validateEmail = (labelID, inputID) => {
     const $label = $(labelID);
+    const $input = $(inputID);
     const email = $(inputID).val();
    
      if (validateEmailRegex(email)) {
         $label.css('color', 'green');
+        $input.css('border-bottom', '1px solid green');
     }
     else {
         $label.css('color', 'red');
+        $input.css('border-bottom', '1px solid red');
     }
 
     return false;

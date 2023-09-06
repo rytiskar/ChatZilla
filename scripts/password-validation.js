@@ -64,13 +64,16 @@ export function checkSpecialSymbolContainment(password) {
 
 export const passwordValidation = (labelID, inputID) => {
     const $label = $(labelID);
+    const $input = $(inputID);
     const password = $(inputID).val();
 
     if (passwordComplexityValidation(password)) {
         $label.css('color', 'green');
+        $input.css('border-bottom', '1px solid green');
     }
     else {
         $label.css('color', 'red');
+        $input.css('border-bottom', '1px solid red');
     }
 
     return false;
@@ -88,14 +91,17 @@ function checkPasswordIdenticality(initialPassword, repeatedPassword) {
 
 export const repeatPasswordValidation = (labelID, initialPasswordInputID, repeatedPasswordInputID) => {
     const $label = $(labelID);
+    const $input = $(repeatedPasswordInputID);
     const initialPassword = $(initialPasswordInputID).val();
     const repeatedPassword = $(repeatedPasswordInputID).val();
 
     if (checkPasswordIdenticality(initialPassword, repeatedPassword)) {
         $label.css('color', 'green');
+        $input.css('border-bottom', '1px solid green');
     }
     else {
         $label.css('color', 'red');
+        $input.css('border-bottom', '1px solid red');
     }
 
     return false;
